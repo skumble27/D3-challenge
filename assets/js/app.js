@@ -29,11 +29,11 @@ var chosenXAxis = "poverty";
 var chosenYAxis = "healthcare";
 
 /*------------------------------------ FUNCTIONS ------------------------------------ */
-function xScale(csvData, chosenXAxis) {
+function xScale(healthData, chosenXAxis) {
     // Establishing the x axis scales (when different data are selected, the axis will change automatically)
     var xLinearScale = d3.scaleLinear()
-      .domain([d3.min(csvData, d => d[chosenXAxis]) * 0.9,
-        d3.max(csvData, d => d[chosenXAxis]) * 1.1
+      .domain([d3.min(healthData, d => d[chosenXAxis]) * 0.9,
+        d3.max(healthData, d => d[chosenXAxis]) * 1.2
       ])
       .range([0, width]);
   
@@ -41,11 +41,11 @@ function xScale(csvData, chosenXAxis) {
   }
   
   
-  function yScale(csvData, chosenYAxis) {
+  function yScale(healthData, chosenYAxis) {
     // As with the previous function, the y axis scales will be set up automatically when a different parameter is selected
     var yLinearScale = d3.scaleLinear()
-      .domain([d3.min(csvData, d => d[chosenYAxis]) - 1,
-        d3.max(csvData, d => d[chosenYAxis]) + 1
+      .domain([d3.min(healthData, d => d[chosenYAxis]) - 1,
+        d3.max(healthData, d => d[chosenYAxis]) + 1
       ])
       .range([height, 0]);
   
