@@ -1,11 +1,11 @@
-var svgWidth = 960;
-var svgHeight = 500;
+var svgWidth = 1060;
+var svgHeight = 600;
 
 var margin = {
-  top: 20,
-  right: 40,
-  bottom: 80,
-  left: 100
+  top: 50,
+  right: 70,
+  bottom: 110,
+  left: 130
 };
 
 var width = svgWidth - margin.left - margin.right;
@@ -132,7 +132,12 @@ are changed */
     } 
     else if (chosenXAxis === "age"){
       xlabel = "Age";
-    } 
+    }
+    
+    else if (chosenXAxis === 'state_gdp'){
+      xlabel = 'State GDP'
+    }
+    
     else {
       xlabel = "Income";
     }
@@ -143,7 +148,13 @@ are changed */
     else if (chosenYAxis === "smokes"){
       
       ylabel = "Smokes";
-    } 
+    }
+    
+    else if (chosenYAxis === 'air_pollution_ranking'){
+
+      ylabel = 'Air Pollution in US States'
+    }
+    
     else {
       ylabel = "Obesity";
     }
@@ -173,7 +184,7 @@ are changed */
   }
 /* Reading into the CSV data to plot the initial values */
 
-d3.csv("assets/data/data.csv").then(function(USHealthData){
+d3.csv("assets/data/data1.csv").then(function(USHealthData){
 
     console.log(USHealthData);
 
@@ -185,6 +196,8 @@ d3.csv("assets/data/data.csv").then(function(USHealthData){
         data.age = +data.age;
         data.healthcare = +data.healthcare;
         data.poverty = +data.poverty;
+        data.air_pollution_ranking = +data.air_pollution_ranking
+        data.state_gdp = +data.state_gdp;
     });
 
     /* Setting the initial scales for the plot and calling on the previous created xScale 
@@ -251,6 +264,13 @@ d3.csv("assets/data/data.csv").then(function(USHealthData){
     .attr("value", "income") // <-- This will obtain the value relating to income 
     .text("Median Income per Household")
     .classed("inactive", true);
+  
+    var gdpLabel = groupedXLabels.append("text")
+    .attr("x", 0)
+    .attr("y", 100)
+    .attr("value", "state_gdp") // <-- This will obtain the value relating to state gdp 
+    .text("State GDP")
+    .classed("inactive", true);
 
 // Selected Groups for the y-axis are healthcare, obesity and smoking
   var groupedYLabels = chartGroup.append("g");
@@ -277,6 +297,14 @@ d3.csv("assets/data/data.csv").then(function(USHealthData){
     .attr("y", -80)
     .attr("value", "obesity") // <-- Obtain values relating to obesity rates
     .text("Obese (%)")
+    .classed("inactive", true);
+  
+  var airpollutionLabel = groupedYLabels.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -(height / 2))
+    .attr("y", -100)
+    .attr("value", "air_pollution_ranking") // <-- This will obtain the value relating to income 
+    .text("Air Pollution level Ranking")
     .classed("inactive", true);
 
   // Setting up the initial tooltips
@@ -324,6 +352,24 @@ d3.csv("assets/data/data.csv").then(function(USHealthData){
         incomeLabel
           .classed("active", true)
           .classed("inactive", false);
+        gdpLabel
+        .classed("active", false)
+        .classed("inactive", true);
+          
+      }
+      else if (chosenXAxis === "state_gdp") {
+        povertyLabel
+          .classed("active", false)
+          .classed("inactive", true);
+        ageLabel
+          .classed("active", false)
+          .classed("inactive", true);
+        incomeLabel
+          .classed("active", false)
+          .classed("inactive", true);
+        gdpLabel
+          .classed("active", true)
+          .classed("inactive", false);
       }
       else {
         povertyLabel
@@ -333,6 +379,9 @@ d3.csv("assets/data/data.csv").then(function(USHealthData){
           .classed("active", false)
           .classed("inactive", true);
         incomeLabel
+          .classed("active", false)
+          .classed("inactive", true);
+        gdpLabel
           .classed("active", false)
           .classed("inactive", true);
       }
@@ -370,6 +419,9 @@ d3.csv("assets/data/data.csv").then(function(USHealthData){
         obesityLabel
           .classed("active", false)
           .classed("inactive", true);
+        airpollutionLabel
+          .classed("active", false)
+          .classed("inactive", true);
       }
       else if (chosenYAxis === "obesity"){
         healthcareLabel
@@ -381,6 +433,23 @@ d3.csv("assets/data/data.csv").then(function(USHealthData){
         obesityLabel
           .classed("active", true)
           .classed("inactive", false);
+        airpollutionLabel
+          .classed("active", false)
+          .classed("inactive", true);
+      }
+      else if (chosenYAxis === "air_pollution_ranking"){
+        healthcareLabel
+          .classed("active", false)
+          .classed("inactive", true);
+        smokesLabel
+          .classed("active", false)
+          .classed("inactive", true);
+        obesityLabel
+          .classed("active", false)
+          .classed("inactive", true);
+        airpollutionLabel
+          .classed("active", true)
+          .classed("inactive", false);
       }
       else {
         healthcareLabel
@@ -390,6 +459,9 @@ d3.csv("assets/data/data.csv").then(function(USHealthData){
           .classed("active", false)
           .classed("inactive", true);
         obesityLabel
+          .classed("active", false)
+          .classed("inactive", true);
+        airpollutionLabel
           .classed("active", false)
           .classed("inactive", true);
       }
