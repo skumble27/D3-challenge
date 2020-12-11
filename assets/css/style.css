@@ -13,6 +13,8 @@ body {
   /* Padding bottom by footer height */
   padding-bottom: 80px;
   background-color: black;
+  font-family: 'Nerko One', cursive;
+  font-size: larger;
 }
 
 #footer {
@@ -29,6 +31,7 @@ body {
 #footer p {
   margin: 0;
   font-size: 16px;
+  color: black;
 }
 
 p{

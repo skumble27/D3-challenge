@@ -21,17 +21,19 @@
 .inactive:hover {
   fill: rgb(255, 120, 226);
   cursor: pointer;
+  font-weight: bolder;
 }
 
 /* font size dependent on radius, see app.js */
 .stateText {
-  font-family: sans-serif;
-  fill: #fff;
+  font-family: 'Nerko One', cursive;
+  fill: rgb(255, 0, 0);
   text-anchor: middle;
+  font-size: 20px;
 }
 
 .stateCircle {
-  fill: #1dac00;
+  fill: #fff56b;
   stroke: #e3e3e3;
 }
 
@@ -42,13 +44,13 @@
 
 .d3-tip {
   padding: 6px;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1;
   line-height: 1.5em;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   text-transform: capitalize;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgb(255, 119, 226);
   border-radius: 4px;
 }
 
