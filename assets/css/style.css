@@ -15,9 +15,6 @@ body {
   background-color: black;
   font-family: 'Nerko One', cursive;
   font-size: larger;
-  background-image: url('https://raw.githubusercontent.com/skumble27/D3-challenge/main/images/11b6769c8f2ea91b25fa0bb10bcaf4ab.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #footer {
@@ -28,7 +25,7 @@ body {
   padding-top: 20px;
   padding-bottom: 40px;
   text-align: center;
-  background-color: #f5f5f5;
+  background-color: #9efcff;
 }
 
 #footer p {
@@ -41,10 +38,44 @@ p{
   color: white;
 }
 
+
 h1, h2{
   color: white;
+  text-align: center;
 }
 
 .container{
-  background-color: rgba(0, 0, 0, 0.466);
+  background-color: rgba(0, 0, 0, 0.925);
+  background-size: auto;
+  
+}
+
+#heading h1{
+  text-align: center;
+  color: rgb(255, 255, 255) ;
+  
+}
+
+.panel{
+  background-color: lightblue;
+  color: black;
+  text-align: center;
+  border-style: solid;
+  border-color: rgb(255, 234, 118);
+  padding: 5px;
+}
+
+.panel h3{
+  color: white;
+}
+
+.panel1{
+  background-color: rgb(255, 163, 250);
+  border-style: solid;
+  border-color: rgb(255, 234, 118);
+  padding: 10px;
+}
+
+.panel1 p{
+  color: black;
 }

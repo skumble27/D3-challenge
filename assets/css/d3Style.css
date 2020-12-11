@@ -34,7 +34,8 @@
 
 .stateCircle {
   fill: #fff56b;
-  stroke: #e3e3e3;
+  stroke: #acfff8;
+  stroke-width: 2px;
 }
 
 .chart {
