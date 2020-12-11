@@ -129,3 +129,6 @@ dmypy.json
 .pyre/
 
 /Drafts/*
+*.max
+*.fbx
+*.spp
