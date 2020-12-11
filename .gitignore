@@ -132,4 +132,5 @@ dmypy.json
 *.max
 *.fbx
 *.spp
+*.ai
 newspapertexture.png
