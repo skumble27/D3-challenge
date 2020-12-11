@@ -16,6 +16,8 @@ body {
   font-family: 'Nerko One', cursive;
   font-size: larger;
   background-image: url('https://raw.githubusercontent.com/skumble27/D3-challenge/main/images/11b6769c8f2ea91b25fa0bb10bcaf4ab.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #footer {
