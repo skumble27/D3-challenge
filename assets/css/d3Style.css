@@ -59,6 +59,10 @@
   
 }
 
+h5{
+  color: rgb(0, 0, 255);
+}
+
 /* Mobile Rules */
 @media screen and (max-width: 530px) {
   .stateText {
