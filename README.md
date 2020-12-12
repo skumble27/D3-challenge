@@ -18,7 +18,8 @@ Utilising html, JavaScript (D3 dependencies) as well as CSS, an interactive web 
 
 ![Screenshot2](https://raw.githubusercontent.com/skumble27/D3-challenge/main/images/2ScreenShot.gif)
 
-
+**Figure 1:** Users have the option of viewing the relationship between different parameters by clicking on the label on the x and y axis.
 
 ![Screenshot3](https://raw.githubusercontent.com/skumble27/D3-challenge/main/images/3ScreenShot.gif)
 
+**Figure 2:** Users can also view additional data by hovering the mouse over the specific data points within the graph.
