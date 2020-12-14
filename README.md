@@ -12,7 +12,7 @@ The objective of this project was to develop a [web dashboard](https://skumble27
 
 Utilising html, JavaScript (D3 dependencies) as well as CSS, an interactive web dashboard was created where users can visualise the relationship between the aforementioned parameters pertaining to each region of the United States. A snapshot of what is available and the interface has been provided below:
 
-![Screenshot1](https://raw.githubusercontent.com/skumble27/D3-challenge/main/images/1screenshot.png)
+![Screenshot1](https://raw.githubusercontent.com/skumble27/D3-challenge/main/images/1ScreenShot.gif)
 
 
 
