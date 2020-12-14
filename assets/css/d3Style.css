@@ -36,7 +36,16 @@
   fill: #fff56b;
   stroke: #acfff8;
   stroke-width: 2px;
+  
 }
+
+.stateCircle:hover {
+  fill: #6bb0ff;
+  stroke:white;
+  stroke-width: 8px;
+  
+}
+
 
 .chart {
   display: block;

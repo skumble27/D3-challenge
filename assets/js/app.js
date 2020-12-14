@@ -239,7 +239,7 @@ d3.csv("assets/data/data1.csv").then(function(USHealthData){
   var XYCircles = groupedCircles.append("circle")
     .attr("cx", d => xLinearScale(d[chosenXAxis]))
     .attr("cy", d => yLinearScale(d[chosenYAxis]))
-    .attr("r", 15)
+    .attr("r", 20)
     .classed("stateCircle", true);
 
     // Adding the state abbreviations to the text  
